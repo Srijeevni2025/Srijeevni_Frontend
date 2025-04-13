@@ -27,19 +27,19 @@ const App = () => {
         <Routes>
 
           {/* Launching Page */}
-          <Route path='/' element={<LandingPage />} />
+          {/* <Route path='/' element={<LandingPage />} /> */}
 
 
-          {/* <Route path='/' element={<Home />} /> */}
-          {/* <Route path='/signin' element={<SignIn />} /> */}
-          {/* <Route path='/signup' element={<AuthContainer />} /> */}
-          {/* <Route path='/company' element={<Company />} /> */}
-          {/* <Route path='/about' element={<AboutUs />} /> */}
-          {/* <Route path='/careers' element={<Careers />} /> */}
-          {/* <Route path='/termsofuse' element={<TermsOfUse />} /> */}
-          {/* <Route path='/termsofservices' element={<TermsOfService />} /> */}
-          {/* <Route path='/customerpolicy' element={<CustomerPolicy />} /> */}
-          {/* <Route path='/becomeourlabpartner' element={<BecomeOurLabPartner />} /> */}
+          <Route path='/' element={<Home />} />
+          <Route path='/signin' element={<SignIn />} />
+          <Route path='/signup' element={<AuthContainer />} />
+          <Route path='/company' element={<Company />} />
+          <Route path='/about' element={<AboutUs />} />
+          <Route path='/careers' element={<Careers />} />
+          <Route path='/termsofuse' element={<TermsOfUse />} />
+          <Route path='/termsofservices' element={<TermsOfService />} />
+          <Route path='/customerpolicy' element={<CustomerPolicy />} />
+          <Route path='/becomeourlabpartner' element={<BecomeOurLabPartner />} />
 
         </Routes>
 
