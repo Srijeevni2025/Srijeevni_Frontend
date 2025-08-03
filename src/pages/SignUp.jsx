@@ -4,7 +4,7 @@ import { Context } from '../store/Context'
 
 const SignIn = () => {
 
-    const { setShowSignInTab } = useContext(Context);
+    const { setShowSignUpTab } = useContext(Context);
 
     useEffect(() => {
         document.body.style.overflow = 'hidden'   // disable scroll
@@ -16,7 +16,7 @@ const SignIn = () => {
     const handleCloseTab = (event) => {
         event.preventDefault();
 
-        setShowSignInTab(false);
+        setShowSignUpTab(false);
     }
 
     return (
@@ -41,7 +41,7 @@ const SignIn = () => {
 
                                 <div className='flex justify-end pr-3 pt-1'>
 
-                                    <div className=' rounded-full  py-[1px] px-2 text-cyan-500 font-semibold hover:bg-gray-100 cursor-pointer' onClick={handleCloseTab}>X</div>
+                                    <div className='border-2 rounded-full border-cyan-500 py-[1px] px-2 text-cyan-500 font-semibold hover:bg-gray-100 cursor-pointer' onClick={handleCloseTab}>X</div>
 
                                 </div>
 
@@ -53,7 +53,7 @@ const SignIn = () => {
 
                                 <div className='flex justify-center py-3'>
 
-                                    <h4 className='font-semibold text-lg'>Sign In</h4>
+                                    <h4 className='font-semibold text-lg'>Sign Up</h4>
 
                                 </div>
 

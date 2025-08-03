@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { image } from '../assets/ImageObject'
+import { Context } from '../store/Context'
 
 // const signinfun = () => {
 //     return (
@@ -11,12 +12,36 @@ import { image } from '../assets/ImageObject'
 // }
 
 const Navbar = () => {
+    const { setShowSignInTab, setShowSignUpTab, setShowLocationTab } = useContext(Context);
+
+    const handleSignInClick = (event) => {
+        event.preventDefault();
+
+        setShowSignInTab(true);
+
+        setShowSignUpTab(false); // making sure signup tab is off
+    }
+
+    const handleSignUpClick = (event) => {
+        event.preventDefault();
+
+        setShowSignUpTab(true);
+
+        setShowSignInTab(false); // making sure signin tab is off
+    }
+
+    const handleLocationClick = (event) => {
+        event.preventDefault();
+
+        setShowLocationTab(true);
+    }
+
     return (
         <nav>
 
-            <div className='w-full p-3 border-b-2 bg-white border-gray-300 shadow-lg'>
+            <div className='w-full p-3 bg-white shadow-lg fixed top-0 z-1'>
 
-                <div className='px-4 text-black'>
+                <div className='px-10 text-black'>
 
                     <div className='flex flex-wrap justify-between items-center gap-4'>
 
@@ -27,15 +52,15 @@ const Navbar = () => {
                                 <Link to="/" className='flex items-center'>
 
                                     <img src={image.SrijeevaniLogo} alt='Logo' className='w-8 h-8' />
-                                    <span className='text-lg font-bold ml-2 sreejeevni_text_blue'>SREEJEEVNI</span>
+                                    <span className='text-lg font-bold ml-2 sreejeevni_text_blue'>SRIJEEVNI</span>
                                     
                                 </Link>
 
                             </div>
 
-                            <div className='cursor-pointer'>
+                            <div className='cursor-pointer' onClick={handleLocationClick}>
 
-                                <h1 className='flex text-sm font-light items-center'>
+                                <h1 className='flex text-sm items-center'>
                                     
                                     <span>
                                         <img src={image.LocationPin} alt='location' className='h-4 w-4' />
@@ -56,17 +81,17 @@ const Navbar = () => {
 
                         <div>
 
-                            <Link to="/signin">
+                            {/* <Link to="/signin"> */}
 
-                                <button className='rounded-l-2xl py-1 pl-3 pr-2 w-20 bg-emerald-400 hover:bg-teal-600 text-white'>Sign In</button>
+                                <button className='rounded-l-2xl py-1 pl-3 pr-2 w-20 bg-emerald-400 hover:bg-teal-600 text-white' onClick={handleSignInClick}>Sign In</button>
 
-                            </Link>
+                            {/* </Link> */}
 
-                            <Link to="/signup">
+                            {/* <Link to="/signup"> */}
 
-                                <button className='rounded-r-2xl py-1 pl-2 pr-3 w-20 bg-emerald-500 hover:bg-teal-600 text-white'>Sign Up</button>
+                                <button className='rounded-r-2xl py-1 pl-2 pr-3 w-20 bg-emerald-500 hover:bg-teal-600 text-white' onClick={handleSignUpClick}>Sign Up</button>
 
-                            </Link>
+                            {/* </Link> */}
 
                         </div>
 

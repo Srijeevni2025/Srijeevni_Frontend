@@ -1,11 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/tailwind.css';
 import './css/style.css';
+// import './css/v2.css';
+
 
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LastScrollPosition from './assets/LastScrollPosition';
-import LandingPage from './pages/LandingPage';
+// import LandingPage from './pages/LandingPage'; // For landing page
 import Home from './pages/Home';
 import AuthContainer from './pages/AuthContainer';
 import Company from './pages/Company';
@@ -16,32 +18,38 @@ import TermsOfService from './pages/TermsOfService';
 import CustomerPolicy from './pages/CustomerPolicy';
 import BecomeOurLabPartner from './pages/BecomeOurLabPartner';
 import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import ContextWrapper from './store/ContextWrapper';
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
 
-        <LastScrollPosition />
+        <ContextWrapper>
 
-        <Routes>
+          <LastScrollPosition />
 
-          {/* Launching Page */}
-          {/* <Route path='/' element={<LandingPage />} /> */}
+          <Routes>
+
+            {/* For landing page */}
+            {/* <Route path='/' element={<LandingPage />} /> */}
 
 
-          <Route path='/' element={<Home />} />
-          <Route path='/signin' element={<SignIn />} />
-          <Route path='/signup' element={<AuthContainer />} />
-          <Route path='/company' element={<Company />} />
-          <Route path='/about' element={<AboutUs />} />
-          <Route path='/careers' element={<Careers />} />
-          <Route path='/termsofuse' element={<TermsOfUse />} />
-          <Route path='/termsofservices' element={<TermsOfService />} />
-          <Route path='/customerpolicy' element={<CustomerPolicy />} />
-          <Route path='/becomeourlabpartner' element={<BecomeOurLabPartner />} />
+            <Route path='/' element={<Home />} />
+            {/* <Route path='/signin' element={<SignIn />} /> */}
+            {/* <Route path='/signup' element={<SignUp />} /> */}
+            <Route path='/company' element={<Company />} />
+            <Route path='/about' element={<AboutUs />} />
+            <Route path='/careers' element={<Careers />} />
+            <Route path='/termsofuse' element={<TermsOfUse />} />
+            <Route path='/termsofservices' element={<TermsOfService />} />
+            <Route path='/customerpolicy' element={<CustomerPolicy />} />
+            <Route path='/becomeourlabpartner' element={<BecomeOurLabPartner />} />
 
-        </Routes>
+          </Routes>
+
+        </ContextWrapper>
 
       </BrowserRouter>
     </>
