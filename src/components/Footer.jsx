@@ -87,7 +87,7 @@ const Footer = () => {
 
         <span className='flex-1 text-left'>All Rights Reserved.</span>
         <span className='flex-1 text-center'>Made with <span className='text-red-500'>♥</span> in India</span>
-        <span className='flex-1 text-right'>© 2024 Shreejeevani</span>
+        <span className='flex-1 text-right'>© 2025 Srijeevani</span>
 
       </div>
 
