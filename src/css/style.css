@@ -1,0 +1,23 @@
+.sreejeevni_text_blue {
+    color: #00A2FD;
+}
+
+.sreejeevni_bg_green {
+    background-color: #0CBA00;
+}
+
+.sreejeevni_bg_green:hover {
+    background-color: #0a9c00;
+}
+
+.sreejeevni_bg_blue {
+    background-color: #00A2FD;
+}
+
+.sreejeevni_bg_blue:hover {
+    background-color: #0089d8;
+}
+
+.sreejeevni_button_bg_blue {
+    background-color: #00A2FD;
+}
